@@ -651,6 +651,10 @@ function makeBOMB () {
         BOMB.ay = 250
     }
 }
+browserEvents.Zero.onEvent(browserEvents.KeyEvent.Pressed, function () {
+    currentLevel += 1
+    browserEvents.Zero.pauseUntil(browserEvents.KeyEvent.Released)
+})
 scene.onOverlapTile(SpriteKind.Food, sprites.dungeon.hazardLava0, function (sprite, location) {
     sprites.destroy(sprite)
 })
