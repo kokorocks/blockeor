@@ -765,7 +765,7 @@ browserEvents.N.onEvent(browserEvents.KeyEvent.Pressed, function () {
     browserEvents.N.pauseUntil(browserEvents.KeyEvent.Released)
 })
 controller.combos.attachCombo("abal", function () {
-    currentLevel += 1
+    currentLevel += game.askForNumber("change lvl by")
     Make(currentLevel)
 })
 function make_activated_thumper () {
