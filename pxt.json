@@ -8,7 +8,8 @@
         "controller": "*",
         "Timers": "github:microsoft/arcade-timers#v1.1.0",
         "animation": "*",
-        "browser-events": "*"
+        "browser-events": "*",
+        "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24"
     },
     "files": [
         "main.blocks",
