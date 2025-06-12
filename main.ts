@@ -761,6 +761,11 @@ function gards () {
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.vy += 80
 })
+browserEvents.N.onEvent(browserEvents.KeyEvent.Pressed, function () {
+    currentLevel += 1
+    Make(currentLevel)
+    browserEvents.N.pauseUntil(browserEvents.KeyEvent.Released)
+})
 function make_activated_thumper () {
     for (let value of tiles.getTilesByType(assets.tile`myTile32`)) {
         mySprite2 = sprites.create(img`
