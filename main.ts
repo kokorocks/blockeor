@@ -255,9 +255,6 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             info.changeScoreBy(-100)
             info.changeLifeBy(1)
         }
-        if (controller.A.isPressed()) {
-            game.reset()
-        }
     }
 })
 function Make (level: number) {
@@ -765,7 +762,7 @@ browserEvents.N.onEvent(browserEvents.KeyEvent.Pressed, function () {
     browserEvents.N.pauseUntil(browserEvents.KeyEvent.Released)
 })
 controller.combos.attachCombo("abal", function () {
-    currentLevel += game.askForNumber("change lvl by")
+    currentLevel += game.askForNumber("change lvl by", 2)
     Make(currentLevel)
 })
 function make_activated_thumper () {
