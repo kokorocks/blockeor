@@ -653,6 +653,7 @@ function makeBOMB () {
 }
 browserEvents.Zero.onEvent(browserEvents.KeyEvent.Pressed, function () {
     currentLevel += 1
+    Make(currentLevel)
     browserEvents.Zero.pauseUntil(browserEvents.KeyEvent.Released)
 })
 scene.onOverlapTile(SpriteKind.Food, sprites.dungeon.hazardLava0, function (sprite, location) {
