@@ -652,9 +652,7 @@ function makeBOMB () {
     }
 }
 browserEvents.Zero.onEvent(browserEvents.KeyEvent.Pressed, function () {
-    currentLevel += 1
-    Make(currentLevel)
-    browserEvents.Zero.pauseUntil(browserEvents.KeyEvent.Released)
+	
 })
 scene.onOverlapTile(SpriteKind.Food, sprites.dungeon.hazardLava0, function (sprite, location) {
     sprites.destroy(sprite)
@@ -759,12 +757,16 @@ function gards () {
     }
 }
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite.vy += 80
+	
 })
 browserEvents.N.onEvent(browserEvents.KeyEvent.Pressed, function () {
     currentLevel += 1
     Make(currentLevel)
     browserEvents.N.pauseUntil(browserEvents.KeyEvent.Released)
+})
+controller.combos.attachCombo("abal", function () {
+    currentLevel += 1
+    Make(currentLevel)
 })
 function make_activated_thumper () {
     for (let value of tiles.getTilesByType(assets.tile`myTile32`)) {
