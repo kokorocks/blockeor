@@ -775,7 +775,7 @@ function gards () {
     }
 }
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    mySprite.vy += 100
 })
 browserEvents.N.onEvent(browserEvents.KeyEvent.Pressed, function () {
     currentLevel += 1
